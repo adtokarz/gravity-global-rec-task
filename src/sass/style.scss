@@ -1,6 +1,7 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "buttons";
 
 * {
   margin: 0;
@@ -76,6 +77,9 @@ body {
         font-size: 16px;
         cursor: pointer;
       } 
+      .button--reset{
+        display: none;
+      }
   }
 }
 
