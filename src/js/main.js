@@ -1,8 +1,18 @@
-const test = () => {
-    console.log('test');
-    console.log('test2');
-    //coment
-    console.log('test3');
+const popupOpenBtn = document.querySelector('.container__article .button--primary');
+const popup = document.querySelector('.popup');
+const popopCloseBtn = document.querySelector('.popup__button--close')
+
+const openPopup = () => {
+    popup.style.display = "flex";
 }
 
-test();
+const closePopup = () => {
+   popup.style.display = "none"; 
+}
+
+
+
+popupOpenBtn.addEventListener('click', openPopup);
+popopCloseBtn.addEventListener('click', closePopup);
+
+
