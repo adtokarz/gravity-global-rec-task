@@ -33,5 +33,6 @@ const resetCounter = () => {
 popupOpenBtn.addEventListener('click', openPopup);
 popopCloseBtn.addEventListener('click', closePopup);
 popupResetCounter.addEventListener('click', resetCounter);
+popup.addEventListener('click', closePopup);
 
 
