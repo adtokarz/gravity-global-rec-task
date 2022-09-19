@@ -4,13 +4,16 @@ const popopCloseBtn = document.querySelector('.popup__button--close')
 const clickCounter = document.querySelector('.click-counter');
 const popupResetCounter = document.querySelector('.popup .button--reset');
 
-let click = 0;
+let clickNumber = localStorage.counter;
+
 
 const openPopup = () => {
     popup.style.display = "flex";
-    click++;
-    clickCounter.textContent = parseInt(click);
-    if(click >= 5){
+    clickNumber = localStorage.counter;
+    clickNumber++;
+    localStorage.setItem("counter", clickNumber);
+    clickCounter.textContent = localStorage.counter;
+    if(clickNumber >= 5){
         popupResetCounter.style.display = "block";
     }
 }
@@ -20,7 +23,7 @@ const closePopup = () => {
 }
 
 const resetCounter = () => {
-    click = 0;
+    localStorage.setItem("counter", 0);
     closePopup();
     popupResetCounter.style.display = "none";
 }
